@@ -1,0 +1,63 @@
+// ------------------------------------
+// Colors
+// ------------------------------------
+$palette: (
+    colors: (
+        red: #da0711,
+        green: #3b9f79,
+        blue: #65a7d7,
+        orange: #e25923,
+        black: #1D1D1B,
+        white: #fff,
+        gray: #cacacb
+    ),
+    darken: (
+        1: 20%,
+        2: 50%,
+        3: 80%
+    ),
+    lighten: (
+        1: 20%,
+        2: 40%,
+        3: 65%,
+        4: 90%
+    )
+);
+
+// ------------------------------------
+// Spacing
+// ------------------------------------
+
+$spacings: (
+    small: .5rem,
+    medium: 1rem,
+    large: 2rem
+);
+
+// ------------------------------------
+// Typography
+// ------------------------------------
+
+$fonts: (
+    serif: (
+        font: ('Roboto Slab', 'Georgia', serif),
+        weights: (
+            light: 200,
+            regular: 300,
+            bold: 700
+        )
+    ),
+    sans: (
+        font: ('Open Sans', 'Helvetica', sans-serif),
+        weights: (
+            light: 300,
+            regular: 400,
+            bold: 700
+        )
+    )
+);
+
+// ------------------------------------
+// Widths
+// ------------------------------------
+$max-width: 830px;

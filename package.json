@@ -1,0 +1,28 @@
+{
+  "name": "dsb-bootstrap",
+  "version": "1.0.0",
+  "description": "DSB Bootstrap based style",
+  "main": "_dsb-bootstrap.scss",
+  "scripts": {
+    "build": "node-sass _dsb-bootstrap.scss dist/style.css",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netliferesearch/dsb-bootstrap.git"
+  },
+  "keywords": [
+    "dsb",
+    "bootstrap",
+    "style"
+  ],
+  "author": "Kristoffer Brabrand <kristoffer@brabrand.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netliferesearch/dsb-bootstrap/issues"
+  },
+  "homepage": "https://github.com/netliferesearch/dsb-bootstrap#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}

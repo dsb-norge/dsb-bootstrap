@@ -1,0 +1,136 @@
+/*
+Functions
+
+Handy functions.
+
+Styleguide 1.2
+*/
+
+/////////////////////////
+
+/*
+rem-calc($size)
+
+Convert px to rem.
+
+$size - The px size
+
+Styleguide 1.2.1
+*/
+@function rem-calc($size) {
+    $rem-size: $size / 16;
+    @return #{$rem-size}rem;
+}
+
+
+/*
+color($color)
+
+Color function.
+
+$color - The color variable from variables.scss
+
+Styleguide 1.2.2
+*/
+@function color($color) {
+    @if map-deep-get($palette, 'colors', $color) {
+        @return map-deep-get($palette, 'colors', $color);
+    }
+    @warn '`#{$color}` is not in color map';
+    @return null;
+}
+
+/*
+color-variation($color, $variation, $step)
+
+Color function.
+
+$color - The color variable from variables.scss
+$variation - 'lighten' or 'darken'
+$step - 'numeric' The interval of the variation set in from variables.scss
+
+Styleguide 1.2.2
+*/
+@function color-variation($color, $variation, $step) {
+    @if map-deep-get($palette, colors, $color) {
+        @if $variation == lighten {
+            @return mix(
+                white,
+                map-deep-get($palette, 'colors', $color),
+                map-deep-get($palette, $variation, $step)
+            );
+            } @else if $variation == darken {
+            @return mix(
+                black,
+                map-deep-get($palette, 'colors', $color),
+                map-deep-get($palette, $variation, $step)
+            );
+        }
+        @warn 'Variation does not exits';
+    }
+    @warn 'Check if color is is in map';
+    @return null;
+}
+
+/*
+spacing($spacing)
+
+Spacing.
+
+$spacing - The spacing variable from variables.scss
+
+Styleguide 1.2.3
+*/
+@function spacing($spacing) {
+    @if map-has-key($spacings, $spacing) {
+        @return map-get($spacings, $spacing);
+    }
+    @warn '`#{$spacing}` is not in spacing map';
+    @return null;
+}
+
+
+
+/*
+font($font)
+
+To get a font stack from variables.scss.
+*/
+@function font($type) {
+    @if map-has-key($fonts, $type) {
+        @return map-get(map-get($fonts, $type), font);
+    }
+
+    @warn '`#{$font}` is not in fonts map';
+    @return null;
+}
+
+/*
+font-weight($type, $style)
+
+Get the correct weight number for a given style of a font type
+*/
+@function font-weight($type, $style) {
+    @if map-has-key($fonts, $type) {
+        $weights: map-get(map-get($fonts, $type), weights);
+
+        @if map-has-key($weights, $style) {
+            @return map-get($weights, $style);
+        }
+
+        @warn 'Style `#{$style}` is not defined for the `#{$type}` font';
+        @return null;
+    }
+}
+
+
+// ------------------------------------
+// Map Deep Get (`http://www.sitepoint.com/extra-map-functions-sass/`)
+// ------------------------------------
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

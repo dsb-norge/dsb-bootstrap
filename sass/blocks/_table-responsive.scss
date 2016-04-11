@@ -1,0 +1,39 @@
+// Responsive tables
+@media (max-width: $screen-sm - 1) {
+    .table-responsive {
+        width: 100%;
+        border: 0;
+
+        thead { display: none; }
+
+        tbody, tr, th, td { display: block; }
+
+        tr {
+            background: color-variation(grey, lighten, 4);
+
+            &:nth-of-type(even) {
+                background: color-variation(grey, lighten, 3);
+            }
+        }
+
+        td {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: 6px;
+                padding-right: 10px;
+                width: 45%;
+                white-space: nowrap;
+                font-weight: bold;
+                content: 'No label set';
+            }
+        }
+
+        // Needed to be specific enough to override the bootstrap table styling :/
+        tbody > tr > td {
+            border: 0;
+            padding-left: 50%;
+        }
+    }
+}

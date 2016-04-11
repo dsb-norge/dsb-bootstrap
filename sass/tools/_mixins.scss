@@ -1,0 +1,35 @@
+@mixin max-width($width: $max-width, $center: true) {
+    max-width: $width;
+
+    @if $center {
+        margin: 0 auto;
+    }
+}
+
+@mixin font($type, $style: false) {
+    font-family: font($type);
+
+    @if $style != false {
+        font-weight: font-weight($type, $style);
+    }
+}
+
+@mixin responsive-table($labels, $value-width: 50%, $label-width: 45%) {
+    td {
+        padding-left: $label-width;
+
+        &:before {
+            width: $value-width;
+        }
+
+        @each $label in $labels {
+            $i: index($labels, $label);
+
+            &:nth-of-type(#{$i}) {
+                &:before {
+                    content: $label;
+                }
+            }
+        }
+    }
+}

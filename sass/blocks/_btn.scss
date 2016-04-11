@@ -1,0 +1,16 @@
+// Set shaddow for buttons
+.btn {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.125);
+}
+
+// Remove shaddow for input group buttons and set correct paddings
+.input-group-btn {
+    > .btn {
+        box-shadow: none;
+        padding: $padding-base-vertical + 3 $padding-base-horizontal;
+
+        > .glyphicon {
+            color: color-variation(grey, darken, 1);
+        }
+    }
+}
