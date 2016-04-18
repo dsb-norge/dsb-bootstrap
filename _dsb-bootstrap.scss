@@ -17,15 +17,16 @@ Bootstrap variables
 @import 'sass/bootstrap-variables';
 
 /*
+Bootstrap
+*/
+@import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+/*
 Blocks
 */
 @import 'sass/blocks/btn';
 @import 'sass/blocks/form-control';
 @import 'sass/blocks/nav';
+@import 'sass/blocks/menu';
 @import 'sass/blocks/panel';
 @import 'sass/blocks/table-responsive';
-
-/*
-Bootstrap
-*/
-@import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap';

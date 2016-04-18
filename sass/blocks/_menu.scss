@@ -1,0 +1,48 @@
+.menu {
+    @include font(sans, light);
+    border-bottom: 2px solid color(grey);
+    padding: spacing(medium);
+
+    .menu-container {
+        @include max-width;
+        height: 50px;
+    }
+
+    .menu-logo {
+        @media (max-width: $screen-sm - 1) {
+            float: left;
+
+            svg {
+                width: 60px;
+            }
+        }
+    }
+
+    .back, nav {
+        line-height: 50px;
+
+        a {
+            color: color-variation(grey, darken, 2);
+        }
+    }
+
+    nav {
+        a {
+            &:before {
+                display: inline-block;
+                margin: 0 10px -8px 5px;
+                border-left: 1px solid color(grey);
+                height: 28px;
+                content: '';
+            }
+
+            &:first-of-type {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    color: #5a5a5a;
+}
