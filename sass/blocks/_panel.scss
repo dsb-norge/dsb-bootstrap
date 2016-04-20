@@ -1,4 +1,49 @@
 // Remove shaddow from panel elements
 .panel {
+    margin-bottom: 0;
     box-shadow: none;
+
+    &:last-of-type {
+        border-bottom: 1px solid color-variation(grey, darken, 1);
+    }
+
+    .header {
+        position: relative;
+        border-top: 1px solid color-variation(grey, darken, 1);
+        padding-left: $panel-body-padding;
+
+        &:after {
+            display: block;
+            position: absolute;
+            top: 2.3rem;
+            right: 1.5rem;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0"><title>arrow</title><polyline points="11.71 6.91 6.21 1.41 0.71 6.91" style="fill:none;stroke:%23d45634;stroke-miterlimit:10;stroke-width:2px"/></svg>');
+            background-repeat: no-repeat;
+            width: 1.2rem;
+            height: .7rem;
+            content: '';
+        }
+
+        h2 {
+            margin: 1.5rem 0;
+            font-size: 1.8rem;
+        }
+    }
+
+    &.panel-open {
+        .header {
+            &:after {
+                transform: rotate(180deg);
+            }
+
+            h2 {
+                margin-bottom: 2.5rem;
+                color: color(orange);
+            }
+        }
+    }
+
+    .content {
+        padding-left: $panel-body-padding;
+    }
 }
