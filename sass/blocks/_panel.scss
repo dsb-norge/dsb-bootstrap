@@ -4,12 +4,12 @@
     box-shadow: none;
 
     &:last-of-type {
-        border-bottom: 1px solid color-variation(grey, darken, 1);
+        border-bottom: 1px solid color-variation(black, lighten, 4);
     }
 
     .header {
         position: relative;
-        border-top: 1px solid color-variation(grey, darken, 1);
+        border-top: 1px solid color-variation(black, lighten, 4);
         padding-left: $panel-body-padding;
 
         &:after {
@@ -22,6 +22,8 @@
             width: 1.2rem;
             height: .7rem;
             content: '';
+            transform: rotateX(180deg);
+            transition: transform .3s;
         }
 
         h2 {
@@ -33,7 +35,7 @@
     &.panel-open {
         .header {
             &:after {
-                transform: rotate(180deg);
+                transform: rotateX(0deg);
             }
 
             h2 {
@@ -45,5 +47,6 @@
 
     .content {
         padding-left: $panel-body-padding;
+        margin-top: 1.5rem;
     }
 }

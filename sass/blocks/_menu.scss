@@ -22,7 +22,7 @@
         line-height: 50px;
 
         a {
-            color: color-variation(grey, darken, 2);
+            color: color(grey);
         }
     }
 
@@ -43,6 +43,4 @@
             }
         }
     }
-
-    color: #5a5a5a;
 }

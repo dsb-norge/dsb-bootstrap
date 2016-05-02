@@ -33,9 +33,9 @@ $brand-primary:         color(orange);
 // $text-color:            $gray-dark
 
 //** Global textual link color.
-// $link-color:            $brand-primary
+$link-color:            $brand-primary;
 //** Link hover color set via `darken()` function.
-// $link-hover-color:      darken($link-color, 15%)
+$link-hover-color:      $brand-primary;
 //** Link hover decoration.
 // $link-hover-decoration: underline
 
@@ -453,21 +453,21 @@ $nav-tabs-active-link-hover-border-color:   color(grey);
 //
 //##
 
-// $pagination-color:                     $link-color
-// $pagination-bg:                        #fff
-// $pagination-border:                    #ddd
+$pagination-color:                     color(black);
+$pagination-bg:                        transparent;
+$pagination-border:                    transparent;
 
-// $pagination-hover-color:               $link-hover-color
-// $pagination-hover-bg:                  $gray-lighter
-// $pagination-hover-border:              #ddd
+$pagination-hover-color:               $brand-primary;
+$pagination-hover-bg:                  transparent;
+$pagination-hover-border:              transparent;
 
-// $pagination-active-color:              #fff
-// $pagination-active-bg:                 $brand-primary
-// $pagination-active-border:             $brand-primary
+$pagination-active-color:              $brand-primary;
+$pagination-active-bg:                 transparent;
+$pagination-active-border:             transparent;
 
-// $pagination-disabled-color:            $gray-light
-// $pagination-disabled-bg:               #fff
-// $pagination-disabled-border:           #ddd
+$pagination-disabled-color:            color(black);
+$pagination-disabled-bg:               transparent;
+$pagination-disabled-border:           transparent;
 
 
 //== Pager
@@ -709,7 +709,7 @@ $nav-tabs-active-link-hover-border-color:   color(grey);
 //##
 
 // $panel-bg:                    #fff
-$panel-body-padding:             15px;
+$panel-body-padding:             10px;
 // $panel-heading-padding:       10px 15px
 // $panel-footer-padding:        $panel-heading-padding
 // $panel-border-radius:         $border-radius-base
