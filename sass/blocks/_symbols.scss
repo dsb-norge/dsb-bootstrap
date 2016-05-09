@@ -2,8 +2,8 @@ i {
     display: inline-block;
     background: no-repeat center center;
     background-size: contain;
-    height: 0.5em;
-    width: 1em;
+    height: 5px;
+    width: 10px;
 
     &.home {
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41.67"><title>test</title><path d="M321.49,415.84v-40h-30v40h-5v1.67h40v-1.67h-5Zm-11.67,0h-6.67v-10h6.67v10Zm10,0h-8.33V404.17h-10v11.67h-8.33V377.51h26.67v38.33Zm-15-35h-8.33v8.33h8.33v-8.33Zm-1.67,6.67h-5v-5h5v5Zm13.33-6.67h-8.33v8.33h8.33v-8.33Zm-1.67,6.67h-5v-5h5v5Zm1.67,5h-8.33v8.33h8.33v-8.33Zm-1.67,6.67h-5v-5h5v5Zm-10-6.67h-8.33v8.33h8.33v-8.33Zm-1.67,6.67h-5v-5h5v5Z" transform="translate(-286.49 -375.84)" style="fill:%237f8283;fill-rule:evenodd"/></svg>');
