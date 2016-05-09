@@ -1,4 +1,11 @@
 .input-group {
+    .btn {
+        &:active, &:hover, &:focus {
+          transform: none;
+          box-shadow: none;
+        }
+    }
+
     &.input-group-select {
         background: $input-bg;
 
