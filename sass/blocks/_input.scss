@@ -1,37 +1,44 @@
-%input-focus {
-  border-color: $brand-primary;
-  outline: 2px solid color(orange);
-  outline-offset: -2px;
+%active-state {
+    outline: 2px solid color(orange);
+    border-color: $brand-primary;
+    outline-offset: -2px;
 }
 
-%input-active {
-  
+input {
+    &[type='text'],
+    &[type='password'],
+    &[type='datetime'],
+    &[type='datetime-local'],
+    &[type='date'],
+    &[type='month'],
+    &[type='time'],
+    &[type='week'],
+    &[type='number'],
+    &[type='email'],
+    &[type='url'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='color'] {
+        &, &:active, &:focus {
+            &:focus {
+                @extend %active-state;
+            }
+        }
+    }
 }
 
 textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
 .btn,
 .uneditable-input {
-    &:active:focus, &:active, &:focus {
-        @extend %input-focus;
+    &, &:active, &:focus {
+        &:focus {
+            @extend %active-state;
+        }
     }
 }
 
 .btn {
-  &:hover {
-    @extend %input-focus;
-  }
+    &:hover {
+        @extend %active-state;
+    }
 }

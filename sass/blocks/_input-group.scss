@@ -1,8 +1,8 @@
 .input-group {
     .btn {
         &:active, &:hover, &:focus {
-          transform: none;
-          box-shadow: none;
+            transform: none;
+            box-shadow: none;
         }
     }
 
@@ -10,14 +10,13 @@
         background: $input-bg;
 
         select {
-            background: transparent;
             position: absolute;
-            left: 0;
             right: 0;
+            left: 0;
             z-index: 100;
+            background: transparent;
 
             appearance: none;
-            -webkit-appearance: none;
         }
 
         .input-group-btn {
