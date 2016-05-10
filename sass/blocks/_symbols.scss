@@ -16,4 +16,8 @@ i {
     &.flame {
         @extend %icon-flame;
     }
+
+    &.download {
+        @extend %icon-download;
+    }
 }

@@ -1,0 +1,11 @@
+body {
+    // move this..
+    color: color-variation(black, lighten, 1);
+    font-weight: 200;
+}
+
+p {
+    strong {
+        @include font(sans, semibold);
+    }
+}

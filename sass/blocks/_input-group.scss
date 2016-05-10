@@ -6,24 +6,27 @@
         }
     }
 
-    &.input-group-select {
+    &.input-group-extended {
         background: $input-bg;
 
-        select {
+        select, input {
             position: absolute;
             right: 0;
             left: 0;
             z-index: 100;
             background: transparent;
-
             appearance: none;
+
+            &:focus {
+                z-index: 150;
+            }
         }
 
         .input-group-btn {
             z-index: 50;
 
-            .select-arrow {
-                background: transparent;
+            .btn {
+                pointer-events: none;
             }
         }
     }

@@ -22,14 +22,21 @@ Bootstrap
 */
 @import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
+/**
+Base
+*/
+@import 'sass/base/typography';
+
 /*
 Blocks
 */
 @import 'sass/blocks/btn';
 @import 'sass/blocks/input';
 @import 'sass/blocks/input-group';
-@import 'sass/blocks/symbols';
 @import 'sass/blocks/form-control';
+@import 'sass/blocks/contrast';
+@import 'sass/blocks/page-header';
+@import 'sass/blocks/symbols';
 @import 'sass/blocks/nav';
 @import 'sass/blocks/menu';
 @import 'sass/blocks/panel';

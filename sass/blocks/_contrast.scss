@@ -1,0 +1,24 @@
+.contrast {
+    background: color(orange);
+    color: color(white);
+
+    .page-header {
+        color: color(white);
+    }
+
+    .btn {
+        background: color(orange);
+        box-shadow: none;
+
+        &:focus, &:hover, &:active {
+            &, &:focus {
+                transform: none;
+                outline: none;
+                border: 1px solid color-variation(black, lighten, 3);
+                background-color: color-variation(orange, darken, 1);
+                color: #fff;
+                box-shadow: none;
+            }
+        }
+    }
+}
