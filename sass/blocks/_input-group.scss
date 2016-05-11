@@ -27,6 +27,24 @@
 
             .btn {
                 pointer-events: none;
+                width: 45px;
+                height: 45px;
+
+                i {
+                  height: 25px;
+                  width: 12px;
+                }
+            }
+        }
+
+        .input-lg + .input-group-btn {
+            .btn {
+                height: 60px;
+                width: 60px;
+
+                i {
+                  height: 45px;
+                }
             }
         }
     }

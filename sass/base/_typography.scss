@@ -9,3 +9,13 @@ p {
         @include font(sans, semibold);
     }
 }
+
+h2 {
+    @include font(serif, regular);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+label {
+    @include font(sans, semibold);
+}
