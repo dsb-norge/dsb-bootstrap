@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.887" height="16.651" viewBox="0 0 15.887 16.651">
+  <title>tank</title>
+  <g>
+    <ellipse cx="7.944" cy="2.042" rx="7.444" ry="1.542" style="fill: none;stroke: #42454a;stroke-miterlimit: 10"/>
+    <path d="M19.444,5.717V18.283c0,0.852-3.333,1.542-7.444,1.542s-7.444-.69-7.444-1.542V5.717" transform="translate(-4.056 -3.675)" style="fill: none;stroke: #42454a;stroke-miterlimit: 10"/>
+  </g>
+</svg>

@@ -27,3 +27,13 @@ body {
   color: pink;
 }
 ```
+
+## Developing
+### Icons
+In order to build the icon font, `fontcustom` must be installed on your system. Follow the installation instructions on https://github.com/FontCustom/fontcustom.
+
+When you have fontcustom, build the icon font by going to the root of the project and issuing the following command:
+
+```sh
+npm run icons
+```
