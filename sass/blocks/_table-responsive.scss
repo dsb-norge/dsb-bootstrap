@@ -9,10 +9,8 @@
         tbody, tr, th, td { display: block; }
 
         tr {
-            background: color-variation(grey, lighten, 4);
-
             &:nth-of-type(even) {
-                background: color-variation(grey, lighten, 3);
+                background: color-variation(grey, lighten, 4);
             }
         }
 
@@ -20,8 +18,9 @@
             position: relative;
 
             &:before {
+                @include font(sans, semibold);
                 position: absolute;
-                left: 6px;
+                left: 10px;
                 padding-right: 10px;
                 width: 45%;
                 white-space: nowrap;
