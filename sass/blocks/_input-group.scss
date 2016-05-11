@@ -26,24 +26,24 @@
             z-index: 50;
 
             .btn {
-                pointer-events: none;
                 width: 45px;
                 height: 45px;
+                pointer-events: none;
 
                 i {
-                  height: 25px;
-                  width: 12px;
+                    width: 12px;
+                    height: 25px;
                 }
             }
         }
 
         .input-lg + .input-group-btn {
             .btn {
-                height: 60px;
                 width: 60px;
+                height: 60px;
 
                 i {
-                  height: 45px;
+                    height: 45px;
                 }
             }
         }

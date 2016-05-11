@@ -7,17 +7,17 @@
     }
 
     .btn {
-        background: color(orange);
         box-shadow: none;
+        background: color(orange);
 
         &:focus, &:hover, &:active {
             &, &:focus {
                 transform: none;
                 outline: none;
                 border: 1px solid color-variation(black, lighten, 3);
+                box-shadow: none;
                 background-color: color-variation(orange, darken, 1);
                 color: #fff;
-                box-shadow: none;
             }
         }
     }
