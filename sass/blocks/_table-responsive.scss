@@ -8,12 +8,6 @@
 
         tbody, tr, th, td { display: block; }
 
-        tr {
-            &:nth-of-type(even) {
-                background: color-variation(grey, lighten, 4);
-            }
-        }
-
         td {
             position: relative;
 
