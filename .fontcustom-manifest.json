@@ -1,0 +1,98 @@
+{
+  "checksum": {
+    "previous": "4d690d507dc9e5e230ca681577b30688bad3e8b5357e02a4e514b1b420dc7fd6",
+    "current": "4d690d507dc9e5e230ca681577b30688bad3e8b5357e02a4e514b1b420dc7fd6"
+  },
+  "fonts": [
+    "fonts/icons_4d690d507dc9e5e230ca681577b30688.ttf",
+    "fonts/icons_4d690d507dc9e5e230ca681577b30688.svg",
+    "fonts/icons_4d690d507dc9e5e230ca681577b30688.woff",
+    "fonts/icons_4d690d507dc9e5e230ca681577b30688.eot"
+  ],
+  "glyphs": {
+    "arrow": {
+      "codepoint": 61696,
+      "source": "icons/arrow.svg"
+    },
+    "back": {
+      "codepoint": 61697,
+      "source": "icons/back.svg"
+    },
+    "calendar": {
+      "codepoint": 61698,
+      "source": "icons/calendar.svg"
+    },
+    "down": {
+      "codepoint": 61699,
+      "source": "icons/down.svg"
+    },
+    "download": {
+      "codepoint": 61700,
+      "source": "icons/download.svg"
+    },
+    "home": {
+      "codepoint": 61701,
+      "source": "icons/home.svg"
+    },
+    "left": {
+      "codepoint": 61702,
+      "source": "icons/left.svg"
+    },
+    "logo": {
+      "codepoint": 61703,
+      "source": "icons/logo.svg"
+    },
+    "right": {
+      "codepoint": 61704,
+      "source": "icons/right.svg"
+    },
+    "search": {
+      "codepoint": 61705,
+      "source": "icons/search.svg"
+    },
+    "substance-flammeable": {
+      "codepoint": 61706,
+      "source": "icons/substance-flammeable.svg"
+    },
+    "substance-highly-flammeable": {
+      "codepoint": 61707,
+      "source": "icons/substance-highly-flammeable.svg"
+    },
+    "tank": {
+      "codepoint": 61708,
+      "source": "icons/tank.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": true,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": false,
+    "input": {
+      "templates": "icons",
+      "vectors": "icons"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "sass/blocks",
+      "fonts": "fonts",
+      "preview": "icons"
+    },
+    "preprocessor_path": "../fonts",
+    "quiet": false,
+    "templates": [
+      "scss",
+      "preview"
+    ]
+  },
+  "templates": [
+    "sass/blocks/_icons.scss",
+    "icons/icons-preview.html"
+  ]
+}
