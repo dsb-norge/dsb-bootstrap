@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "4d690d507dc9e5e230ca681577b30688bad3e8b5357e02a4e514b1b420dc7fd6",
-    "current": "4d690d507dc9e5e230ca681577b30688bad3e8b5357e02a4e514b1b420dc7fd6"
+    "previous": "ac7413d17bd1930c329dacb51c7871c622aa809696077091feaaf3ff5f3201e7",
+    "current": "ac7413d17bd1930c329dacb51c7871c622aa809696077091feaaf3ff5f3201e7"
   },
   "fonts": [
-    "fonts/icons_4d690d507dc9e5e230ca681577b30688.ttf",
-    "fonts/icons_4d690d507dc9e5e230ca681577b30688.svg",
-    "fonts/icons_4d690d507dc9e5e230ca681577b30688.woff",
-    "fonts/icons_4d690d507dc9e5e230ca681577b30688.eot"
+    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.ttf",
+    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg",
+    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.woff",
+    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot"
   ],
   "glyphs": {
     "arrow": {
@@ -37,10 +37,6 @@
     "left": {
       "codepoint": 61702,
       "source": "icons/left.svg"
-    },
-    "logo": {
-      "codepoint": 61703,
-      "source": "icons/logo.svg"
     },
     "right": {
       "codepoint": 61704,
@@ -80,7 +76,7 @@
     },
     "no_hash": false,
     "output": {
-      "css": "sass/blocks",
+      "css": "sass/base",
       "fonts": "fonts",
       "preview": "icons"
     },
@@ -92,7 +88,7 @@
     ]
   },
   "templates": [
-    "sass/blocks/_icons.scss",
+    "sass/base/_icons.scss",
     "icons/icons-preview.html"
   ]
 }

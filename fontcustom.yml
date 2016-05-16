@@ -28,7 +28,7 @@ input:
 
 output:
   fonts: fonts                              # required
-  css: sass/blocks
+  css: sass/base
   preview: icons
   #my-custom-template.yml: path/to/template/output
 

@@ -8,19 +8,20 @@
     }
 
     .header {
+        @extend .icon-arrow;
         position: relative;
         border-top: 1px solid color-variation(black, lighten, 4);
         padding-left: $panel-body-padding;
 
-        &:after {
-            @extend %icon-arrow;
-            display: block;
+        &:before {
+            transition: transform .3s;
+            color: color(orange);
             position: absolute;
-            top: 23px;
+            top: 6px;
             right: 15px;
-            width: 12px;
             height: 7px;
-            content: '';
+            font-size: 13px;
+            font-weight: bold;
         }
 
         h2 {
@@ -31,8 +32,8 @@
 
     &.panel-open {
         .header {
-            &:after {
-                transform: rotateX(0deg);
+            &:before {
+                transform: rotateX(180deg);
             }
 
             h2 {

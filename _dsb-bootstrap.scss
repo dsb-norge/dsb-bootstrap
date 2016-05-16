@@ -25,6 +25,8 @@ Bootstrap
 /**
 Base
 */
+@import 'sass/base/body';
+@import 'sass/base/icons';
 @import 'sass/base/typography';
 
 /*
@@ -38,7 +40,8 @@ Blocks
 @import 'sass/blocks/form-group';
 @import 'sass/blocks/contrast';
 @import 'sass/blocks/page-header';
-@import 'sass/blocks/symbols';
+@import 'sass/blocks/pagination';
+//@import 'sass/blocks/symbols';
 @import 'sass/blocks/nav';
 @import 'sass/blocks/menu';
 @import 'sass/blocks/panel';

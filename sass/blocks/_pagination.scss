@@ -1,0 +1,17 @@
+.pagination {
+    .icon-left {
+        &:before {
+            margin-right: 15px;
+        }
+    }
+
+    .pagination-next {
+        direction: rtl;
+
+        .icon-right {
+            &:before {
+              margin-left: 15px;
+            }
+        }
+    }
+}

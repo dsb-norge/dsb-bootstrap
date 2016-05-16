@@ -1,0 +1,76 @@
+//
+// Icon Font: icons
+//
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot");
+  src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.woff") format("woff"),
+       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.ttf") format("truetype"),
+       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg#icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-arrow:before,
+.icon-back:before,
+.icon-calendar:before,
+.icon-down:before,
+.icon-download:before,
+.icon-home:before,
+.icon-left:before,
+.icon-right:before,
+.icon-search:before,
+.icon-substance-flammeable:before,
+.icon-substance-highly-flammeable:before,
+.icon-tank:before {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-arrow:before { content: "\f100"; }
+.icon-back:before { content: "\f101"; }
+.icon-calendar:before { content: "\f102"; }
+.icon-down:before { content: "\f103"; }
+.icon-download:before { content: "\f104"; }
+.icon-home:before { content: "\f105"; }
+.icon-left:before { content: "\f106"; }
+.icon-right:before { content: "\f108"; }
+.icon-search:before { content: "\f109"; }
+.icon-substance-flammeable:before { content: "\f10a"; }
+.icon-substance-highly-flammeable:before { content: "\f10b"; }
+.icon-tank:before { content: "\f10c"; }
+
+$font-icons-arrow: "\f100";
+$font-icons-back: "\f101";
+$font-icons-calendar: "\f102";
+$font-icons-down: "\f103";
+$font-icons-download: "\f104";
+$font-icons-home: "\f105";
+$font-icons-left: "\f106";
+$font-icons-right: "\f108";
+$font-icons-search: "\f109";
+$font-icons-substance-flammeable: "\f10a";
+$font-icons-substance-highly-flammeable: "\f10b";
+$font-icons-tank: "\f10c";
