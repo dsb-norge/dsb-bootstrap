@@ -8,37 +8,38 @@
     }
 
     .header {
-        @extend .icon-arrow;
-        position: relative;
         border-top: 1px solid color-variation(black, lighten, 4);
         padding-left: $panel-body-padding;
 
-        &:before {
-            transition: transform .3s;
-            color: color(orange);
-            position: absolute;
-            top: 6px;
-            right: 15px;
-            height: 7px;
-            font-size: 13px;
-            font-weight: bold;
-        }
+        h2, h3 {
+            @extend .icon-arrow;
 
-        h2 {
             margin: 15px 0;
             font-size: 18px;
+            position: relative;
+
+            &:before {
+                transition: transform .3s;
+                color: color(orange);
+                position: absolute;
+                top: 6px;
+                right: 15px;
+                height: 7px;
+                font-size: 13px;
+                font-weight: bold;
+            }
         }
     }
 
     &.panel-open {
         .header {
-            &:before {
-                transform: rotateX(180deg);
-            }
-
-            h2 {
+            h2, h3 {
                 margin-bottom: 25px;
                 color: color(orange);
+
+                &:before {
+                    transform: rotateX(180deg);
+                }
             }
         }
     }
