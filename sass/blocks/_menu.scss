@@ -35,7 +35,7 @@
             vertical-align: middle;
         }
 
-        &:hover {
+        &:hover, &:focus {
             text-decoration: none;
 
             span {
