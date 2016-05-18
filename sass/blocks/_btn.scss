@@ -27,9 +27,11 @@
     &.btn-primary {
         box-shadow: none;
 
-        &:hover {
+        &:hover, &:active, &:focus, &:active:focus {
+            box-shadow: none;
+            transform: 0;
             outline-color: #fff;
-            background: color(orange);
+            background: darken(color(orange), .03);
         }
     }
 }
