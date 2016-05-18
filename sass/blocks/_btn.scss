@@ -5,8 +5,8 @@
     //background: color(white);
     white-space: normal;
 
-    &:focus {
-        &:active {
+    &:focus, &:active {
+        &, &:active {
             transform: translate(0, 1px);
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.125);
         }
@@ -19,7 +19,7 @@
     }
 
     &.btn-default {
-        &:hover {
+        &:hover, &:active, &:focus {
           background: #fff;
         }
     }
