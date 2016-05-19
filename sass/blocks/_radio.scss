@@ -1,0 +1,29 @@
+.radio {
+    input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        box-sizing: border-box;
+        opacity: 0;
+        border: 1px solid red;
+
+        &:checked, &:focus {
+            + .btn {
+                &, &:hover, &:focus {
+                    &, &:active {
+                        @extend .btn-primary;
+                        outline: 0;
+                        transform: none;
+                        border-color: color(orange);
+                        background: color(orange);
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    label {
+        margin-bottom: 20px;;
+    }
+}

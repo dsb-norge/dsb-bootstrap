@@ -9,6 +9,12 @@
     &.input-group-extended {
         background: $input-bg;
 
+        i {
+          font-size: 14px;
+          color: color-variation(gray, lighten, 3);
+          font-weight: normal;
+        }
+
         select, input {
             position: absolute;
             right: 0;
@@ -31,8 +37,11 @@
                 pointer-events: none;
 
                 i {
-                    width: 12px;
-                    height: 25px;
+                    line-height: 35px;
+
+                    &.icon-calendar {
+                        line-height: 25px;
+                    }
                 }
             }
         }
@@ -43,7 +52,11 @@
                 height: 60px;
 
                 i {
-                    height: 45px;
+                    line-height: 50px;
+
+                    &.icon-calendar {
+                        line-height: 40px;
+                    }
                 }
             }
         }

@@ -1,7 +1,7 @@
 // Input fields
 .form-control {
     &.form-control {
-        @include font(serif, light);
+        @include font(serif, regular);
         box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 
         &:focus, &:active {
