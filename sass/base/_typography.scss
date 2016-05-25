@@ -9,12 +9,6 @@ p {
     }
 }
 
-h2 {
-    @include font(serif, regular);
-    margin-bottom: 30px;
-    font-size: 24px;
-}
-
 label {
     @include font(sans, semibold);
 }

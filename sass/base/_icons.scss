@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot");
-  src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.woff") format("woff"),
-       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.ttf") format("truetype"),
-       url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg#icons") format("svg");
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icons.woff") format("woff"),
+       url("../fonts/icons.ttf") format("truetype"),
+       url("../fonts/icons.svg#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("../fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg#icons") format("svg");
+    src: url("../fonts/icons.svg#icons") format("svg");
   }
 }
 
@@ -28,6 +28,7 @@
 .icon-calendar:before,
 .icon-down:before,
 .icon-download:before,
+.icon-help:before,
 .icon-home:before,
 .icon-left:before,
 .icon-right:before,
@@ -54,6 +55,7 @@
 .icon-calendar:before { content: "\f102"; }
 .icon-down:before { content: "\f103"; }
 .icon-download:before { content: "\f104"; }
+.icon-help:before { content: "\f10d"; }
 .icon-home:before { content: "\f105"; }
 .icon-left:before { content: "\f106"; }
 .icon-right:before { content: "\f108"; }
@@ -67,6 +69,7 @@ $font-icons-back: "\f101";
 $font-icons-calendar: "\f102";
 $font-icons-down: "\f103";
 $font-icons-download: "\f104";
+$font-icons-help: "\f10d";
 $font-icons-home: "\f105";
 $font-icons-left: "\f106";
 $font-icons-right: "\f108";

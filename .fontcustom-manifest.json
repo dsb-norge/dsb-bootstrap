@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "ac7413d17bd1930c329dacb51c7871c622aa809696077091feaaf3ff5f3201e7",
-    "current": "ac7413d17bd1930c329dacb51c7871c622aa809696077091feaaf3ff5f3201e7"
+    "previous": "12d4c28a550d92dda02451389d4403531e338a77f950000bee86d8f2bb3c7efe",
+    "current": "12d4c28a550d92dda02451389d4403531e338a77f950000bee86d8f2bb3c7efe"
   },
   "fonts": [
-    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.ttf",
-    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.svg",
-    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.woff",
-    "fonts/icons_ac7413d17bd1930c329dacb51c7871c6.eot"
+    "fonts/icons.ttf",
+    "fonts/icons.svg",
+    "fonts/icons.woff",
+    "fonts/icons.eot"
   ],
   "glyphs": {
     "arrow": {
@@ -29,6 +29,10 @@
     "download": {
       "codepoint": 61700,
       "source": "icons/download.svg"
+    },
+    "help": {
+      "codepoint": 61709,
+      "source": "icons/help.svg"
     },
     "home": {
       "codepoint": 61701,
@@ -74,7 +78,7 @@
       "templates": "icons",
       "vectors": "icons"
     },
-    "no_hash": false,
+    "no_hash": true,
     "output": {
       "css": "sass/base",
       "fonts": "fonts",

@@ -5,7 +5,7 @@
   "main": "_dsb-bootstrap.scss",
   "scripts": {
     "build": "node-sass _dsb-bootstrap.scss dist/style.css",
-    "icons": "fontcustom compile icons",
+    "icons": "fontcustom compile icons -h",
     "prepublish": "npm run build"
   },
   "repository": {
