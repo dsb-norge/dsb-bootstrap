@@ -1,5 +1,9 @@
-.radio {
-    input {
+.button-list {
+    @extend .radio;
+
+    input[type="checkbox"], input[type="radio"] {
+        @extend input[type="radio"];
+
         width: 1px;
         height: 1px;
         overflow: hidden;
