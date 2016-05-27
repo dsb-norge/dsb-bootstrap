@@ -1,9 +1,9 @@
-.label {
+label, .label {
     @include font(sans, semibold);
-    display: inline-block;
     color: color-variation(black, lighten, 1);
     font-size: inherit;
     padding: 0;
     margin: 0 0 5px;
     line-height: $line-height-base;
+    display: inline;
 }

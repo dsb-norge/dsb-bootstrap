@@ -48,14 +48,14 @@
 
         .input-lg + .input-group-btn {
             .btn {
-                width: 60px;
-                height: 60px;
+                width: $input-height-large;
+                height: $input-height-large;
 
                 i {
-                    line-height: 50px;
+                    line-height: $line-height-large * 2;
 
                     &.icon-calendar {
-                        line-height: 40px;
+                        line-height: $line-height-large + 1;
                     }
                 }
             }
