@@ -5,6 +5,7 @@
   "main": "_dsb-bootstrap.scss",
   "scripts": {
     "build": "node-sass _dsb-bootstrap.scss dist/style.css",
+    "postbuild": "postcss --use autoprefixer dist/style.css > dist/style.css",
     "icons": "fontcustom compile icons -h",
     "prepublish": "npm run build"
   },
@@ -25,5 +26,9 @@
   "homepage": "https://github.com/netliferesearch/dsb-bootstrap#readme",
   "dependencies": {
     "bootstrap-sass": "^3.3.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "postcss-cli": "^2.5.2"
   }
 }
