@@ -1,4 +1,4 @@
-label, .label {
+label, .lab {
     @include font(sans, semibold);
     color: color-variation(black, lighten, 1);
     font-size: inherit;
