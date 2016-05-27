@@ -2,8 +2,6 @@
 .btn {
     border-color: color-variation(black, lighten, 4);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.125);
-    //background: color(white);
-    white-space: normal;
 
     &:focus, &:active {
         &, &:active {
