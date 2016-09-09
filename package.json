@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/netliferesearch/dsb-bootstrap.git"
+    "url": "http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git"
   },
   "keywords": [
     "dsb",
@@ -21,14 +21,15 @@
   "author": "Kristoffer Brabrand <kristoffer@brabrand.no>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/netliferesearch/dsb-bootstrap/issues"
+    "url": "http://jira.dsb.no/projects/DSBFS/issues"
   },
-  "homepage": "https://github.com/netliferesearch/dsb-bootstrap#readme",
+  "homepage": "http://vgit.utv.lokal/projects/UI/repos/dsb-bootstrap/browse",
   "dependencies": {
     "bootstrap-sass": "^3.3.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "node-sass": "^3.9.3",
     "postcss-cli": "^2.5.2"
   }
 }
