@@ -1,6 +1,6 @@
 {
   "name": "dsb-bootstrap",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "DSB Bootstrap based style",
   "main": "_dsb-bootstrap.scss",
   "scripts": {
@@ -8,6 +8,9 @@
     "postbuild": "postcss --use autoprefixer dist/style.css -o dist/style.css",
     "icons": "fontcustom compile icons -h",
     "prepublish": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "http://vnexus.utv.lokal/content/repositories/npm-internal/"
   },
   "repository": {
     "type": "git",
