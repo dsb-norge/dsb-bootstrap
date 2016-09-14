@@ -7,7 +7,8 @@
     "build": "node-sass _dsb-bootstrap.scss dist/style.css",
     "postbuild": "postcss --use autoprefixer dist/style.css -o dist/style.css",
     "icons": "fontcustom compile icons -h",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "publishConfig": {
     "registry": "http://vnexus.utv.lokal/content/repositories/npm-internal/"
