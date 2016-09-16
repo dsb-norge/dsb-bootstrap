@@ -29,11 +29,11 @@
   },
   "homepage": "http://vgit.utv.lokal/projects/UI/repos/dsb-bootstrap/browse",
   "dependencies": {
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "3.3.7"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "node-sass": "^3.9.3",
-    "postcss-cli": "^2.5.2"
+    "autoprefixer": "6.4.1",
+    "node-sass": "3.10.0",
+    "postcss-cli": "2.6.0"
   }
 }
