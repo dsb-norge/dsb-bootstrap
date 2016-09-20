@@ -29,6 +29,13 @@ body {
 ```
 
 ## Developing
+
+Clone this repo and install package dependencies:
+
+```sh
+npm install
+```
+
 ### Icons
 In order to build the icon font, `fontcustom` must be installed on your system. Follow the installation instructions on https://github.com/FontCustom/fontcustom.
 
@@ -37,3 +44,28 @@ When you have fontcustom, build the icon font by going to the root of the projec
 ```sh
 npm run icons
 ```
+
+### Styles
+After doing changes to `_dsb-bootstrap.scss` you can run `npm run build`
+in order to write a new `style.css` to the `dist` folder.
+
+## Release
+
+When committing changes to the master branch of this repo, the CI-system
+will run the build and release a new version of it to Nexus.
+
+Thus, it will automatically run the following command:
+
+```sh
+npm version patch -m "Bump to version %s"
+```
+
+This will commit a new version of package.json, bumping the version.
+
+This means that you should pull the latest changes after committing to
+master.
+
+Note that it's not necessary to run the build prior to committing 
+changes to the repo. The build system will do this automatically, as
+noted above.
+ 
