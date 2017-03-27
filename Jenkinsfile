@@ -2,7 +2,7 @@
 node('linux') {
    stage('Preparation') {
       checkout scm
-      echo env
+      echo "${env}"
       gitCmd = 'git remote set-url origin ${env.GIT_REPO_URL}'
       echo gitCmd
       //sh 'git remote set-url origin ${bamboo.repository.git.repositoryUrl}'
