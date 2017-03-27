@@ -4,8 +4,7 @@ node('linux') {
       checkout scm
       def stdout = sh(script: 'git config --get remote.origin.url', returnStdout: true)
       println stdout
-      echo "${env.JOB_NAME}"
-      gitCmd = 'git remote set-url origin ${env.GIT_REPO_URL}'
+      gitCmd = 'git remote set-url origin ${stdout}'
       echo gitCmd
       //sh 'git remote set-url origin ${bamboo.repository.git.repositoryUrl}'
    }
