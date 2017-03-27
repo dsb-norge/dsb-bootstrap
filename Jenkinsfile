@@ -3,18 +3,15 @@ node('linux') {
    stage('Preparation') {
       checkout scm
       GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
-      println GIT_URL
-      gitCmd = "git remote set-url origin $GIT_URL"
-      echo gitCmd
-      //sh 'git remote set-url origin ${bamboo.repository.git.repositoryUrl}'
+      sh 'git remote set-url origin $GIT_URL'
    }
    stage('Build') {
       // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
       // The script below will make bash act as if it had been invoked as a login shell.
       // This way we will make use of ENV variables set in .bashrc etc.
-      //sh '''#!/bin/bash -l
-      //npm install
-      //'''
+      sh '''#!/bin/bash -l
+      npm install
+      '''
    }
    stage('Deploy to Nexus') {
       //sh '''#!/bin/bash -l
