@@ -2,6 +2,8 @@
 node('linux') {
    stage('Preparation') {
       checkout scm
+      def stdout = sh(script: 'git config --get remote.origin.url', returnStdout: true)
+      println stdout
       echo "${env.JOB_NAME}"
       gitCmd = 'git remote set-url origin ${env.GIT_REPO_URL}'
       echo gitCmd
