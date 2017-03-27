@@ -4,7 +4,7 @@ node('linux') {
       checkout scm
       GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
       println GIT_URL
-      gitCmd = 'git remote set-url origin $GIT_URL'
+      gitCmd = "git remote set-url origin $GIT_URL"
       echo gitCmd
       //sh 'git remote set-url origin ${bamboo.repository.git.repositoryUrl}'
    }
