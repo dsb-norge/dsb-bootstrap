@@ -3,7 +3,7 @@ node('linux') {
    stage('Preparation') {
       checkout scm
       GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
-      sh 'git remote set-url origin $GIT_URL'
+      sh "git remote set-url origin $GIT_URL"
    }
    stage('Build') {
       // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
