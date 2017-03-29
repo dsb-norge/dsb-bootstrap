@@ -6,7 +6,8 @@ node('linux') {
         dir('node_modules') {
             deleteDir()
         }
-        checkout scm
+        //checkout scm
+        checkout([$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins', url: 'http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git']]])
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
