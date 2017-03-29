@@ -8,7 +8,7 @@
     "postbuild": "postcss --use autoprefixer dist/style.css -o dist/style.css",
     "icons": "fontcustom compile icons -h",
     "prepublish": "npm run build",
-    "postversion": "git push origin master --follow-tags && npm publish"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "publishConfig": {
     "registry": "http://vnexus.utv.lokal/content/repositories/npm-internal/"
