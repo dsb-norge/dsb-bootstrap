@@ -2,6 +2,7 @@
 node('linux') {
     stage('Preparation') {
         checkout scm
+        sh 'ls -l'
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
