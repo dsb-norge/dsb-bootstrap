@@ -8,7 +8,6 @@ node('linux') {
         }
         //checkout scm
         git credentialsId: 'jenkins', url: 'http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git'
-        echo "$GIT_URL"
         GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
         sh "git remote set-url origin $GIT_URL"
     }
