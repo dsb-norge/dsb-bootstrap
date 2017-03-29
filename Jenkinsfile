@@ -22,6 +22,7 @@ node('linux') {
     if ("${env.BRANCH_NAME}" == 'master') {
         stage('Deploy to Nexus') {
           sh '''#!/bin/bash -l
+          git remote set-url origin http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git
           npm version patch -m "Bump to version %s"
           '''
         }
