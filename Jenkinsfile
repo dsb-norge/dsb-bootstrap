@@ -8,8 +8,6 @@ node('linux') {
         }
         //checkout scm
         git credentialsId: 'jenkins', url: 'http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git'
-        GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
-        sh "git remote set-url origin $GIT_URL"
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
@@ -22,7 +20,7 @@ node('linux') {
     if ("${env.BRANCH_NAME}" == 'master') {
         stage('Deploy to Nexus') {
           sh '''#!/bin/bash -l
-          git remote set-url origin http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git
+          git remote set-url origin http://jenkins@vgit.utv.lokal/scm/ui/dsb-bootstrap.git
           npm version patch -m "Bump to version %s"
           '''
         }
