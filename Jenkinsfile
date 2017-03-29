@@ -1,8 +1,12 @@
 #!/usr/bin/env groovy
 node('linux') {
     stage('Preparation') {
+        // Delete node_modules folder in order to force installation every build.
+        // This is necessary when swithcing Node versions, because of node_sass compilation.
+        dir('node_modules') {
+            deleteDir()
+        }
         checkout scm
-        sh 'ls -l'
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
