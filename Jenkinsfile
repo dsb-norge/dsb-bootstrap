@@ -18,11 +18,9 @@ node('linux') {
     }
     if ("${env.BRANCH_NAME}" == 'master') {
         stage('Deploy to Nexus') {
-            sshagent(['685629be-91d1-487e-869f-728a2058c913']) {
-                sh '''#!/bin/bash -l
-                npm version patch -m "Bump to version %s"
-                '''
-            }
+          sh '''#!/bin/bash -l
+          npm version patch -m "Bump to version %s"
+          '''
         }
     }
 }
