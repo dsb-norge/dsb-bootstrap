@@ -20,10 +20,8 @@ node('linux') {
         '''
     }
     if ("${env.BRANCH_NAME}" == 'master') {
-        GIT_URL = sh(script: 'git config --get remote.origin.url', returnStdout: true)
         stage('Deploy to Nexus') {
           sh '''#!/bin/bash -l
-          git remote set-url origin $GIT_URL
           npm version patch -m "Bump to version %s"
           '''
         }
