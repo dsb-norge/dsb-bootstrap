@@ -16,9 +16,9 @@ node('linux') {
         npm install
         '''
     }
-    if ("${env.BRANCH_NAME}" == 'master') {
-        lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
-        sh "echo $lastCommit"
+    lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
+    if ("${env.BRANCH_NAME}" == 'master' && !lastCommit.startsWith("Bump to version")) {
+        echo "Deploying to Nexus..."
         //stage('Deploy to Nexus') {
         //  sh '''#!/bin/bash -l
         //  npm version patch -m "Bump to version %s"
