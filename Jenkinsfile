@@ -1,18 +1,12 @@
 #!/usr/bin/env groovy
 node('linux') {
-    def lastCommit1 = sh returnStdout: true, script: 'git log -1 --pretty=%B'
-    echo "$lastCommit1"
-    if (lastCommit1.startsWith("Bump to version")) {
-        return
-    }
     stage('Preparation') {
-        // Delete node_modules folder in order to force installation every build.
-        // This is necessary when swithcing Node versions, because of node_sass compilation.
+        // Delete node_modules folder in order to force installation on every build.
+        // This is necessary when eg. swithcing Node versions, because of node_sass compilation etc.
         dir('node_modules') {
             deleteDir()
         }
         checkout scm
-
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
@@ -22,9 +16,7 @@ node('linux') {
         npm install
         '''
     }
-    //Beacuse "npm version patch" will commit and push to master, this hack is applied to avoid building indefinitely.
-    def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
-    if ("${env.BRANCH_NAME}" == 'master' && !lastCommit.startsWith("Bump to version")) {
+    if ("${env.BRANCH_NAME}" == 'master') {
         stage('Deploy to Nexus') {
           sh '''#!/bin/bash -l
           npm version patch -m "Bump to version %s"
