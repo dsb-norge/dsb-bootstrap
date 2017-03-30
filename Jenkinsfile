@@ -16,13 +16,13 @@ node('linux') {
         npm install
         '''
     }
+    //Beacuse "npm version patch" will commit and push to master, this hack is applied to avoid building indefinitely.
     lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
     if ("${env.BRANCH_NAME}" == 'master' && !lastCommit.startsWith("Bump to version")) {
-        echo "Deploying to Nexus.."
-        //stage('Deploy to Nexus') {
-        //  sh '''#!/bin/bash -l
-        //  npm version patch -m "Bump to version %s"
-        //  '''
-        //}
+        stage('Deploy to Nexus') {
+          sh '''#!/bin/bash -l
+          npm version patch -m "Bump to version %s"
+          '''
+        }
     }
 }
