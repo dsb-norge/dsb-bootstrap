@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 node('linux') {
-    def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
-    echo "$lastCommit"
+    def lastCommit1 = sh returnStdout: true, script: 'git log -1 --pretty=%B'
+    echo "$lastCommit1"
     stage('Preparation') {
         // Delete node_modules folder in order to force installation every build.
         // This is necessary when swithcing Node versions, because of node_sass compilation.
