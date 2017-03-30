@@ -17,6 +17,8 @@ node('linux') {
         '''
     }
     if ("${env.BRANCH_NAME}" == 'master') {
+        lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
+        sh "echo $lastCommit"
         //stage('Deploy to Nexus') {
         //  sh '''#!/bin/bash -l
         //  npm version patch -m "Bump to version %s"
