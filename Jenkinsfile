@@ -2,6 +2,9 @@
 node('linux') {
     def lastCommit1 = sh returnStdout: true, script: 'git log -1 --pretty=%B'
     echo "$lastCommit1"
+    if (lastCommit1.startsWith("Bump to version")) {
+        return
+    }
     stage('Preparation') {
         // Delete node_modules folder in order to force installation every build.
         // This is necessary when swithcing Node versions, because of node_sass compilation.
