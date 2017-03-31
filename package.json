@@ -1,6 +1,6 @@
 {
   "name": "dsb-bootstrap",
-  "version": "1.1.38",
+  "version": "1.1.39",
   "description": "DSB Bootstrap based style",
   "main": "_dsb-bootstrap.scss",
   "scripts": {
