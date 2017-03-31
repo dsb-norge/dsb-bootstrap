@@ -1,18 +1,18 @@
 #!/usr/bin/env groovy
 node('linux') {
+    def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
     stage('Preparation') {
-        return
+        checkout scm
+        //This check is applied to avoid building indefinitely.
+        echo "$lastCommit"
+        if (lastCommit.startsWith("[ci skip]")) {
+            currentBuild.result = 'ABORTED'
+            error('CI skip notification seen. Aborting build.')
+        }
         // Delete node_modules folder in order to force installation on every build.
         // This is necessary when eg. swithcing Node versions, because of node_sass compilation etc..
         dir('node_modules') {
             deleteDir()
-        }
-        checkout scm
-        //This check is applied to avoid building indefinitely.
-        def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
-        echo "$lastCommit"
-        if (lastCommit.startsWith("[ci skip]")) {
-            return;
         }
     }
     stage('Build') {
