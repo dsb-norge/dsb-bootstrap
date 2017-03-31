@@ -9,6 +9,7 @@ node('linux') {
             currentBuild.result = 'ABORTED'
             error('CI skip notification seen. Aborting build.')
         }
+        sh "git clean -f && git reset --hard origin/master"
         // Delete node_modules folder in order to force installation on every build.
         // This is necessary when eg.  swithcing Node versions, because of node_sass compilation etc..
         dir('node_modules') {
