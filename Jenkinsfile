@@ -25,10 +25,10 @@ node('linux') {
         //'''
     }
     if ("${env.BRANCH_NAME}" == 'master') {
-        //stage('Deploy to Nexus') {
-        //  sh '''#!/bin/bash -l
-        //  npm version patch -m "[ci skip] Bump to version %s"
-        //  '''
-        //}
+        stage('Deploy to Nexus') {
+          sh '''#!/bin/bash -l
+          npm version patch -m "[ci skip] Bump to version %s"
+          '''
+        }
     }
 }
