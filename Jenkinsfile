@@ -7,6 +7,11 @@ node('linux') {
             deleteDir()
         }
         checkout scm
+        //This check is applied to avoid building indefinitely.
+        def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
+        if (lastCommit.startsWith("[ci skip]")) {
+            return;
+        }
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
@@ -19,7 +24,7 @@ node('linux') {
     if ("${env.BRANCH_NAME}" == 'master') {
         stage('Deploy to Nexus') {
           sh '''#!/bin/bash -l
-          npm version patch -m "Bump to version %s"
+          npm version patch -m "[ci skip] Bump to version %s"
           '''
         }
     }
