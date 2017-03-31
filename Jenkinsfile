@@ -20,15 +20,15 @@ node('linux') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
         // The script below will make bash act as if it had been invoked as a login shell.
         // This way we will make use of ENV variables set in .bashrc etc.
-        sh '''#!/bin/bash -l
-        npm install
-        '''
+        //sh '''#!/bin/bash -l
+        //npm install
+        //'''
     }
     if ("${env.BRANCH_NAME}" == 'master') {
-        stage('Deploy to Nexus') {
-          sh '''#!/bin/bash -l
-          npm version patch -m "[ci skip] Bump to version %s"
-          '''
-        }
+        //stage('Deploy to Nexus') {
+        //  sh '''#!/bin/bash -l
+        //  npm version patch -m "[ci skip] Bump to version %s"
+        //  '''
+        //}
     }
 }
