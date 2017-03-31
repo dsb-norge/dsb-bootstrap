@@ -10,7 +10,7 @@ node('linux') {
             error('CI skip notification seen. Aborting build.')
         }
         // Delete node_modules folder in order to force installation on every build.
-        // This is necessary when eg. swithcing Node versions, because of node_sass compilation etc..
+        // This is necessary when eg.  swithcing Node versions, because of node_sass compilation etc..
         dir('node_modules') {
             deleteDir()
         }
