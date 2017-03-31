@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 node('linux') {
-    def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
     stage('Preparation') {
         deleteDir()
         checkout scm
         //This check is applied to avoid building indefinitely.
+        lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
         echo "$lastCommit"
         if (lastCommit.startsWith("[ci skip]")) {
             currentBuild.result = 'ABORTED'
