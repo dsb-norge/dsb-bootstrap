@@ -10,6 +10,7 @@ node('linux') {
         checkout scm
         //This check is applied to avoid building indefinitely.
         def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
+        echo "$lastCommit"
         if (lastCommit.startsWith("[ci skip]")) {
             return;
         }
@@ -23,10 +24,10 @@ node('linux') {
         '''
     }
     if ("${env.BRANCH_NAME}" == 'master') {
-        stage('Deploy to Nexus') {
-          sh '''#!/bin/bash -l
-          npm version patch -m "[ci skip] Bump to version %s"
-          '''
-        }
+        //stage('Deploy to Nexus') {
+        //  sh '''#!/bin/bash -l
+        //  npm version patch -m "[ci skip] Bump to version %s"
+        //  '''
+        //}
     }
 }
