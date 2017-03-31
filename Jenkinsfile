@@ -2,6 +2,7 @@
 node('linux') {
     def lastCommit = sh returnStdout: true, script: 'git log -1 --pretty=%B'
     stage('Preparation') {
+        deleteDir()
         checkout scm
         //This check is applied to avoid building indefinitely.
         echo "$lastCommit"
@@ -9,12 +10,11 @@ node('linux') {
             currentBuild.result = 'ABORTED'
             error('CI skip notification seen. Aborting build.')
         }
-        sh "git clean -f && git reset --hard origin/master"
         // Delete node_modules folder in order to force installation on every build.
         // This is necessary when eg.  swithcing Node versions, because of node_sass compilation etc..
-        dir('node_modules') {
-            deleteDir()
-        }
+        //dir('node_modules') {
+        //    deleteDir()
+        //}
     }
     stage('Build') {
         // We're using nvm (node version manager) installed locally for the 'jenkins-agent' user.
