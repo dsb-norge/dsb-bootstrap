@@ -10,9 +10,6 @@
     "prepublish": "npm run build",
     "postversion": "git push origin HEAD:master --follow-tags && npm publish"
   },
-  "publishConfig": {
-    "registry": "http://vnexus.utv.lokal/content/repositories/npm-internal/"
-  },
   "repository": {
     "type": "git",
     "url": "http://vgit.utv.lokal/scm/ui/dsb-bootstrap.git"
